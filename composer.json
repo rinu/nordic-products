@@ -1,0 +1,15 @@
+{
+    "name": "rinu/nordic-products",
+    "type": "library",
+    "license": "WTFPL",
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NordicProducts\\": "src/"
+        }
+    }
+}
