@@ -17,3 +17,9 @@ The recommended way to install is through
 ```bash
 composer require rinu/nordic-products
 ```
+
+## Testing
+
+```bash
+vendor/bin/codecept run
+```

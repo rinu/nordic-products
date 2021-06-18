@@ -1,0 +1,11 @@
+{
+    "resource": {
+        "paging": {
+            "totalPages": 3
+        }
+    },
+    "stock": [{
+        "id": 2,
+        "price": 6
+    }]
+}

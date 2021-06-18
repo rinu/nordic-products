@@ -1,0 +1,10 @@
+{
+    "resource": {
+        "paging": {
+            "totalPages": 3
+        }
+    },
+    "products": [{
+        "id": 2
+    }]
+}

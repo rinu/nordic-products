@@ -11,5 +11,9 @@
         "psr-4": {
             "NordicProducts\\": "src/"
         }
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.0.0"
     }
 }
