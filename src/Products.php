@@ -8,19 +8,19 @@ use GuzzleHttp\Promise\Utils;
 use Psr\Http\Message\ResponseInterface;
 
 class Products {
-    private const BASE_URI = 'https://api.nordic-digital.com/v1/';
+    protected const BASE_URI = 'https://api.nordic-digital.com/v1/';
 
     public $apiKey = '';
 
-    private $client;
+    protected $client;
 
-    private $totalProductPages = 1;
+    protected $totalProductPages = 1;
 
-    private $products = [];
+    protected $products = [];
 
-    private $totalStockPages = 1;
+    protected $totalStockPages = 1;
 
-    private $stocks = [];
+    protected $stocks = [];
 
     public function getProducts(bool $withPriceStock = false): ?array {
         $currentProductPage = 1;
@@ -62,7 +62,7 @@ class Products {
         return $this->products;
     }
 
-    private function getClient(): Client {
+    protected function getClient(): Client {
         if (!$this->client) {
             $this->client = new Client([
                 'base_uri' => self::BASE_URI,
@@ -73,7 +73,7 @@ class Products {
         return $this->client;
     }
 
-    private function startProductRequest(int $page): PromiseInterface {
+    protected function startProductRequest(int $page): PromiseInterface {
         return $this->getClient()->getAsync('product', [
             'query' => [
                 'page' => $page,
@@ -94,7 +94,7 @@ class Products {
         });
     }
 
-    private function startStockRequest(int $page): PromiseInterface {
+    protected function startStockRequest(int $page): PromiseInterface {
         return $this->getClient()->getAsync('stock', [
             'query' => [
                 'page' => $page,
